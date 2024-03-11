@@ -97,6 +97,7 @@ const CheckoutProvider = ({ children }) => {
           checkoutSessionData;
 
         formattedCheckoutData.shippingAddress = { id: shippingAddressId };
+        formattedCheckoutData.email = user.email;
 
         dispatch({
           type: 'UPDATE_CHECKOUT_SESSION',

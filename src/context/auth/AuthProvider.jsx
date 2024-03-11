@@ -40,7 +40,11 @@ const authReducer = (state, action) => {
       return {
         ...initialState,
         user: action.payload.user,
-        authIsReady: true,
+        authIsReady: true
+        // isVerified: true,
+        // name: 'Shopper',
+        // lastName: 'User',
+        // email: 'shopper@gmail.com'
       };
     }
 
@@ -105,9 +109,10 @@ const AuthProvider = ({ children }) => {
             payload: { user },
           });
         }
-      } else {
-        await signInAnonymously(auth);
-      }
+      } 
+      // else {
+      //   await signInAnonymously(auth);
+      // }
     });
 
     return () => unsub();

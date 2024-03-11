@@ -6,6 +6,5 @@ export const firebaseConfig = {
     storageBucket: "shopping-cart-ba6cb.appspot.com",
     messagingSenderId: "952537939475",
     appId: "1:952537939475:web:9ddb146fdbc03e16b809e6",
+    measurementId: "G-H0VPYYPTK0"
   };
-
-  // measurementId: "G-H0VPYYPTK0"

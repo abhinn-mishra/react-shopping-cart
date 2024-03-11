@@ -45,7 +45,7 @@ const App = () => {
         by CC BY 3.0
       </div>
       {(!authIsReady || !cartIsReady) && <Loader />}
-      {authIsReady && cartIsReady && (
+      {authIsReady && cartIsReady && (  
         <Routes>
           <Route path="/" element={<Layout />}>
             <Route index element={<HomePage />} />

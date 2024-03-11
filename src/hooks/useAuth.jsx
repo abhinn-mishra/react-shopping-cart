@@ -69,12 +69,11 @@ export const useAuth = () => {
 
     try {
       dispatchCartAction({ type: 'IS_LOGIN' });
-      const anonymousUser = user;
+      const userCredential = await signInWithEmailAndPassword(auth, email, password);
+      const anonymousUser = userCredential.user;
 
       const anonymousCartRef = doc(db, 'carts', anonymousUser.uid);
       const anonymousCartDoc = await getDoc(anonymousCartRef);
-
-      await signInWithEmailAndPassword(auth, email, password);
 
       // if (!userCredential) {
       //   throw Error('Error');
